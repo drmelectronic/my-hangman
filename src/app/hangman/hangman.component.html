@@ -2,9 +2,11 @@
     <span>Adivina la frase escondida:</span>
     <br>
     <div id="frase">
-        <app-letra *ngFor="let letter of letters"
-                   [letter]="letter"
-        ></app-letra>
+        <div class="word" *ngFor="let word of words">
+            <app-letra *ngFor="let letter of word"
+                       [letter]="letter"
+            ></app-letra>
+        </div>
     </div>
 </div>
 <div class="container-image">
