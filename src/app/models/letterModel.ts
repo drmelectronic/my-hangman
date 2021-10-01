@@ -16,28 +16,33 @@ export class LetterModel {
         }
         // console.log('letra', this.letra, 'hidden', this.hidden)
     }
+
+    mostrar() {
+        this.show = this.letra;
+        this.class = 'revelado';
+    }
     
     verify(key: string): boolean {
         if (this.letra === key) {
-            this.show = this.letra;
+            this.mostrar();
             return true;
         } else if (this.letra === 'Á' && key === 'A') {
-            this.show = this.letra;
+            this.mostrar();
             return true;
         } else if (this.letra === 'É' && key === 'E') {
-            this.show = this.letra;
+            this.mostrar();
             return true;
         } else if (this.letra === 'Í' && key === 'I') {
-            this.show = this.letra;
+            this.mostrar();
             return true;
         } else if (this.letra === 'Ó' && key === 'O') {
-            this.show = this.letra;
+            this.mostrar();
             return true;
         } else if (this.letra === 'Ú' && key === 'U') {
-            this.show = this.letra;
+            this.mostrar();
             return true;
         } else if (this.letra === 'Ü' && key === 'U') {
-            this.show = this.letra;
+            this.mostrar();
             return true;
         }
         return false;

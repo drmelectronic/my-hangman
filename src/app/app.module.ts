@@ -15,6 +15,12 @@ import { CommonModule } from '@angular/common';
     LetraComponent,
     KeyComponent
   ],
+  exports:[
+    AppComponent,
+    HangmanComponent,
+    LetraComponent,
+    KeyComponent
+  ], 
   imports: [
     CommonModule,
     BrowserModule,

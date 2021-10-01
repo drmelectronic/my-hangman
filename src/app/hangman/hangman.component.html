@@ -1,27 +1,30 @@
-<div class="container">
-    <span>Adivina la frase escondida:</span>
-    <br>
-    <div id="frase">
-        <div class="word" *ngFor="let word of words">
-            <app-letra *ngFor="let letter of word"
-                       [letter]="letter"
-            ></app-letra>
+<div class="main">
+    <div class="container-image">
+        <img id="imagen" [src]="'/assets/hangman' + fallas + '.png'" alt="Fallas {{fallas}}">
+    </div>
+    <div class="container">
+        <br>
+        <div id="frase">
+            <div class="word" *ngFor="let word of words">
+                <app-letra *ngFor="let letter of word"
+                           [letter]="letter"
+                ></app-letra>
+            </div>
         </div>
     </div>
 </div>
-<div class="container-image">
-    <img id="imagen" [src]="'/assets/hangman' + fallas + '.png'" alt="Fallas {{fallas}}">
-</div>
-<div class="container">
-    <p>Teclado:</p>
-    <app-key *ngFor="let key of keys"
-             [key]="key"
-             (clickeado)="keyPressed($event)"
-    ></app-key>
-</div>
+<div class="footer">
+    <div class="container">
+        <app-key *ngFor="let key of keys"
+                 [key]="key"
+                 [frase]="frase"
+                 (clickeado)="keyPressed($event)"
+        ></app-key>
+    </div>
+    <div class="container-level">
+        <button class="btn-level" (click)="anteriorNivel()" [disabled]="isMinLevel"><<</button>
+        <span> Nivel {{level + 1}}</span>
+        <button class="btn-level" (click)="siguienteNivel()" [disabled]="isMaxLevel">>></button>
+    </div>
 
-<div class="container-level">
-    <button (click)="anteriorNivel()" [disabled]="isMinLevel">Nivel Anterior</button>
-    <span> Nivel {{level + 1}}</span>
-    <button (click)="siguienteNivel()" [disabled]="isMaxLevel">Nivel Siguiente</button>
 </div>

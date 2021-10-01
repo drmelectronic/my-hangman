@@ -9,6 +9,7 @@ import { KeyModel } from '../models/keyModel';
 export class KeyComponent implements OnInit {
 
   @Input() key: KeyModel;
+  @Input() frase: string;
   @Output() clickeado = new EventEmitter<string>();
   
   constructor() { }
@@ -17,7 +18,13 @@ export class KeyComponent implements OnInit {
   }
 
   onKeyClick() {
-    this.clickeado.emit(this.key.letra);
-    this.key.clickeado = true;
+    if (this.key.class === '') {
+      this.clickeado.emit(this.key.letra);
+      if (this.frase.includes(this.key.letra)) {
+        this.key.class = 'clickeado';
+      } else {
+        this.key.class = 'error';
+      }
+    }
   }
 }

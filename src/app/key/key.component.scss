@@ -1,10 +1,23 @@
 .key {
   opacity: 1;
-  font-size: 16px;
+  font-size: 24px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
   padding: 8px;
-  margin: 10px;
+  width: 24px !important;
+  margin: 4px;
   display: inline-block;
   border: black solid 1px;
   border-radius: 5px;
   background-color: azure;
+  text-align: center;
+  transition: all ease 1s;
+}
+
+.clickeado {
+  background-color: palegreen;
+}
+
+.error {
+  background-color: indianred;
 }

@@ -1,6 +1,6 @@
-<button class="key"
-        [disabled]="key.clickeado"
+<div class="key"
+        [ngClass]="key.class"
         (click)="onKeyClick()"
 >
     {{key.letra}}
-</button>
+</div>

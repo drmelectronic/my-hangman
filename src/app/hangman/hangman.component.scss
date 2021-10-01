@@ -1,25 +1,53 @@
+.btn-level {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #d72d2d;
+  height: 42px;
+  width: 100px;
+  color: white;
+  font-size: 1.5em;
+}
+
+.main {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+}
+
 .container {
-  width: 100%;
+  width: fit-content;
   margin: 0 auto;
 }
 
 .container-image {
   width: 200px;
-  margin: 0 auto;
+  height: 200px;
+  padding: 12px 0;
+  margin: 24px auto;
+  background-color: white;
+  border-radius: 20px;
+  margin-right: 20px;
 }
 
 .container-level {
-  width: 300px;
-  margin: 0 auto;
+  width: fit-content;
+  margin: 10px auto;
 }
 
 .container-level button {
-  padding: 8px;
-  margin: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.container-level span {
+  color: white;
+  font-size: 2em;
+  padding: 30px 0;
 }
 
 #imagen {
   height: 200px;
+  transition: all ease 1s;
 }
 
 #frase {
