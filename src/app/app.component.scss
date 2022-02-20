@@ -4,12 +4,12 @@ h1 {
 }
 
 header {
-  background-color: #ab88e3;
+  background-color: #e3cc8e;
   min-height: 100px;
   color: white;
   font-size: 32px;
   text-align: center;
-  background-image: url('/assets/header-pamela.png');
+  background-image: url('/assets/header-iglesia.png');
   //background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@ section {
   display: flex;
   flex: auto;
   background-color: cornflowerblue;
-  background-image: url('/assets/background-pamela.png');
+  background-image: url('/assets/background-iglesia.png');
   background-size: cover;
   background-position: top;
   overflow: auto;

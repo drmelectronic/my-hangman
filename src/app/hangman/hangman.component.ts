@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FRASES} from '../frases/pamela';
+import {FRASES} from '../frases/iglesia';
 import {KeyModel} from '../models/keyModel';
 import {LetterModel} from '../models/letterModel';
 
@@ -79,5 +79,9 @@ export class HangmanComponent implements OnInit {
     this.words.push(word);
 
     [...'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'].forEach(k => this.keys.push(this.getKey(k)));
+  }
+
+  resolver(): void {
+    this.letters.filter(l => l.class !== 'puntuacion' && l.class !== 'espacio').forEach(l => l.mostrar());
   }
 }

@@ -40,9 +40,10 @@
 }
 
 .container-level span {
-  color: white;
   font-size: 2em;
-  padding: 30px 0;
+  border-color: black;
+  color: black;
+  border-radius: 5px;
 }
 
 #imagen {
@@ -59,4 +60,16 @@
   width: fit-content;
   display: inline-block;
   align-content: center;
+}
+
+.resolv {
+  margin-top: 25px;
+  margin-left: 25px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #398a3d;
+  height: 42px;
+  width: 150px;
+  color: white;
+  font-size: 1.5em;
 }

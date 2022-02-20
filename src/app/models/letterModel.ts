@@ -17,11 +17,11 @@ export class LetterModel {
         // console.log('letra', this.letra, 'hidden', this.hidden)
     }
 
-    mostrar() {
+    mostrar(): void {
         this.show = this.letra;
         this.class = 'revelado';
     }
-    
+
     verify(key: string): boolean {
         if (this.letra === key) {
             this.mostrar();
