@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FRASES} from '../frases/iglesia';
+import {FRASES} from '../frases/minecraft';
 import {KeyModel} from '../models/keyModel';
 import {LetterModel} from '../models/letterModel';
 
