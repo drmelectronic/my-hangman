@@ -7,9 +7,9 @@ import { LetterModel } from '../models/letterModel';
   styleUrls: ['./letra.component.scss']
 })
 export class LetraComponent implements OnInit {
-  
-  @Input() letter: LetterModel;
-  
+
+  @Input() letter: LetterModel | null = null;
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FRASES} from '../frases/minecraft';
+import {FRASES} from '../frases/juan';
 import {KeyModel} from '../models/keyModel';
 import {LetterModel} from '../models/letterModel';
 
@@ -12,12 +12,12 @@ export class HangmanComponent implements OnInit {
 
   level = 0;
   frases: string[] = FRASES;
-  frase: string;
-  isMinLevel: boolean;
-  isMaxLevel: boolean;
+  frase: string = '';
+  isMinLevel: boolean = false;
+  isMaxLevel: boolean = false;
   letters: LetterModel[] = [];
   keys: KeyModel[] = [];
-  words: LetterModel[][];
+  words: LetterModel[][] = [];
   fallas = 0;
 
   constructor() { }
@@ -66,7 +66,7 @@ export class HangmanComponent implements OnInit {
     this.letters = [];
     this.words = [];
     this.keys = [];
-    let word = [];
+    let word: LetterModel[] = [];
     [...this.frase].forEach(l => {
       const letra = new LetterModel(l);
       word.push(letra);

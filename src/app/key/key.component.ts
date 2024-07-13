@@ -8,17 +8,17 @@ import { KeyModel } from '../models/keyModel';
 })
 export class KeyComponent implements OnInit {
 
-  @Input() key: KeyModel;
-  @Input() frase: string;
+  @Input() key: KeyModel | null = null;
+  @Input() frase: string = '';
   @Output() clickeado = new EventEmitter<string>();
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onKeyClick() {
-    if (this.key.class === '') {
+    if (this.key?.class === '') {
       this.clickeado.emit(this.key.letra);
       if (this.frase.includes(this.key.letra)) {
         this.key.class = 'clickeado';

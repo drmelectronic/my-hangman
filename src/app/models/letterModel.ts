@@ -1,11 +1,11 @@
 export class LetterModel {
-    class: string;
+    class: string = '';
     letra: string;
     show: string;
 
     constructor(letra: string) {
         this.letra = letra;
-        if (this.letra === ',' || this.letra === '.' || this.letra === ';') {
+        if (this.letra === ',' || this.letra === '.' || this.letra === ';' || this.letra === '?' || this.letra === '¿' || this.letra === '¡' || this.letra === '!') {
             this.show = this.letra;
             this.class = 'puntuacion';
         } else {
