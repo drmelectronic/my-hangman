@@ -4,13 +4,10 @@ h1 {
 }
 
 header {
-  background-color: #7dc3e3;
   min-height: 100px;
   color: white;
   font-size: 32px;
   text-align: center;
-  background-image: url('/assets/header-juan.png');
-  //background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -18,8 +15,6 @@ header {
 section {
   display: flex;
   flex: auto;
-  background-color: cornflowerblue;
-  background-image: url('/assets/background-juan.png');
   background-size: cover;
   background-position: top;
   overflow: auto;

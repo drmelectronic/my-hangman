@@ -1,5 +1,9 @@
-<header>
+<header *ngIf="theme" [style.background-image]="'url(assets/' + theme + '/header.png)'"
+        [style.background-color]="config?.header"
+>
 </header>
-<section>
-  <app-hangman></app-hangman>
+<section  *ngIf="theme" [style.background-image]="'url(assets/' + theme + '/background.png)'">
+  <app-hangman
+     [style]="theme"
+  ></app-hangman>
 </section>

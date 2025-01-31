@@ -7,6 +7,7 @@ import { HangmanComponent } from './hangman/hangman.component';
 import { LetraComponent } from './letra/letra.component';
 import { KeyComponent } from './key/key.component';
 import { CommonModule } from '@angular/common';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,13 @@ import { CommonModule } from '@angular/common';
     HangmanComponent,
     LetraComponent,
     KeyComponent
-  ], 
+  ],
   imports: [
     CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

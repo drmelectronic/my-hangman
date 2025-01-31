@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {FRASES} from '../frases/juan';
+import {Component, Input, OnInit} from '@angular/core';
 import {KeyModel} from '../models/keyModel';
 import {LetterModel} from '../models/letterModel';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-hangman',
@@ -9,9 +9,10 @@ import {LetterModel} from '../models/letterModel';
   styleUrls: ['./hangman.component.scss']
 })
 export class HangmanComponent implements OnInit {
+  @Input() style: string = '';
 
   level = 0;
-  frases: string[] = FRASES;
+  frases: string[] = [];
   frase: string = '';
   isMinLevel: boolean = false;
   isMaxLevel: boolean = false;
@@ -20,10 +21,16 @@ export class HangmanComponent implements OnInit {
   words: LetterModel[][] = [];
   fallas = 0;
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   ngOnInit(): void {
-    this.setLevel();
+    this.http.get<string[]>(`/assets/${this.style}/frases.json`)
+      .subscribe(f => {
+        this.frases = f;
+        this.setLevel();
+      });
   }
 
   getKey(k: string): KeyModel {
